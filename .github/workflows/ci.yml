@@ -23,6 +23,9 @@ jobs:
       run: npm install
 
     # ETAPA 1: ANÁLISE ESTÁTICA DE CÓDIGO (LINTER)
+    - name: Dar permissão ao ESLint
+      run: chmod +x node_modules/.bin/eslint
+      
     - name: Executar análise estática de código (Linter)
       run: npm run lint
 
